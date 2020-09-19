@@ -17,8 +17,7 @@ protocol APIRequestService {
 class DefaultAPIRequestService: APIRequestService {
     func publisher(for urlString: String) -> AnyPublisher<APIResponse, URLError> {
         guard let url = URL(string: urlString) else {
-            return Result.failure(URLError(.badURL))
-                .publisher
+            return Result.Publisher(URLError(.badURL))
                 .eraseToAnyPublisher()
         }
 
