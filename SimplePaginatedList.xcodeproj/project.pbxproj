@@ -14,12 +14,23 @@
 		0A81510225165A4B008F68A5 /* SimplePaginatedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A81510125165A4B008F68A5 /* SimplePaginatedListTests.swift */; };
 		0A81511125166255008F68A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8150F525165A4B008F68A5 /* LaunchScreen.storyboard */; };
 		0A8151122516625C008F68A5 /* FactoryListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8150F025165A4A008F68A5 /* FactoryListViewController.storyboard */; };
+		0A98FB292516779D00114690 /* FactoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98FB282516779D00114690 /* FactoryRepository.swift */; };
+		0A98FB2C251678E900114690 /* FactoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98FB2B251678E900114690 /* FactoryList.swift */; };
+		0A98FB2E251679A700114690 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98FB2D251679A700114690 /* Factory.swift */; };
+		0A98FB3E2516822D00114690 /* FactoryRepositoryIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98FB3D2516822D00114690 /* FactoryRepositoryIntegrationTests.swift */; };
 		7890B30AFDADA10E98BA4E6B /* Pods_SimplePaginatedListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795D95B74FFC45BCFB213A8B /* Pods_SimplePaginatedListTests.framework */; };
 		A55E58102C8699BA0942DB03 /* Pods_SimplePaginatedList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0FD3DC8C8C8D6906994067 /* Pods_SimplePaginatedList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		0A8150FE25165A4B008F68A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A8150DF25165A4A008F68A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A8150E625165A4A008F68A5;
+			remoteInfo = SimplePaginatedList;
+		};
+		0A98FB382516821600114690 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A8150DF25165A4A008F68A5 /* Project object */;
 			proxyType = 1;
@@ -40,6 +51,12 @@
 		0A81510125165A4B008F68A5 /* SimplePaginatedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePaginatedListTests.swift; sourceTree = "<group>"; };
 		0A81510325165A4B008F68A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A815113251662BF008F68A5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A98FB282516779D00114690 /* FactoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryRepository.swift; sourceTree = "<group>"; };
+		0A98FB2B251678E900114690 /* FactoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryList.swift; sourceTree = "<group>"; };
+		0A98FB2D251679A700114690 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		0A98FB332516821600114690 /* SimplePaginatedListIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplePaginatedListIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A98FB372516821600114690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A98FB3D2516822D00114690 /* FactoryRepositoryIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryRepositoryIntegrationTests.swift; sourceTree = "<group>"; };
 		3118A4F6136F4CC9E936FFF8 /* Pods-SimplePaginatedList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePaginatedList.debug.xcconfig"; path = "Target Support Files/Pods-SimplePaginatedList/Pods-SimplePaginatedList.debug.xcconfig"; sourceTree = "<group>"; };
 		74BA4AEE50FC0EA63B0F12D0 /* Pods-SimplePaginatedListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePaginatedListTests.release.xcconfig"; path = "Target Support Files/Pods-SimplePaginatedListTests/Pods-SimplePaginatedListTests.release.xcconfig"; sourceTree = "<group>"; };
 		795D95B74FFC45BCFB213A8B /* Pods_SimplePaginatedListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplePaginatedListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +82,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A98FB302516821600114690 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +97,7 @@
 			children = (
 				0A8150E925165A4A008F68A5 /* SimplePaginatedList */,
 				0A81510025165A4B008F68A5 /* SimplePaginatedListTests */,
+				0A98FB342516821600114690 /* SimplePaginatedListIntegrationTests */,
 				0A8150E825165A4A008F68A5 /* Products */,
 				3D791AA7A5ED00A2B3A9FBAD /* Pods */,
 				F7580A0B404E062D9986DE72 /* Frameworks */,
@@ -84,6 +109,7 @@
 			children = (
 				0A8150E725165A4A008F68A5 /* SimplePaginatedList.app */,
 				0A8150FD25165A4B008F68A5 /* SimplePaginatedListTests.xctest */,
+				0A98FB332516821600114690 /* SimplePaginatedListIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +117,8 @@
 		0A8150E925165A4A008F68A5 /* SimplePaginatedList */ = {
 			isa = PBXGroup;
 			children = (
+				0A98FB2A251678CD00114690 /* Models */,
+				0A98FB26251676E300114690 /* Repositories */,
 				0A81510C25165B43008F68A5 /* Ressources */,
 				0A81510D25165ECE008F68A5 /* Systems */,
 				0A81510E25165EFA008F68A5 /* Views */,
@@ -133,6 +161,48 @@
 				0A8150EE25165A4A008F68A5 /* FactoryListViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0A98FB26251676E300114690 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0A98FB272516771000114690 /* Factories */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0A98FB272516771000114690 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				0A98FB282516779D00114690 /* FactoryRepository.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		0A98FB2A251678CD00114690 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A98FB2D251679A700114690 /* Factory.swift */,
+				0A98FB2B251678E900114690 /* FactoryList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A98FB342516821600114690 /* SimplePaginatedListIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A98FB3F2516823300114690 /* Repositories */,
+				0A98FB372516821600114690 /* Info.plist */,
+			);
+			path = SimplePaginatedListIntegrationTests;
+			sourceTree = "<group>";
+		};
+		0A98FB3F2516823300114690 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0A98FB3D2516822D00114690 /* FactoryRepositoryIntegrationTests.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		3D791AA7A5ED00A2B3A9FBAD /* Pods */ = {
@@ -197,6 +267,24 @@
 			productReference = 0A8150FD25165A4B008F68A5 /* SimplePaginatedListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		0A98FB322516821600114690 /* SimplePaginatedListIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A98FB3A2516821600114690 /* Build configuration list for PBXNativeTarget "SimplePaginatedListIntegrationTests" */;
+			buildPhases = (
+				0A98FB2F2516821600114690 /* Sources */,
+				0A98FB302516821600114690 /* Frameworks */,
+				0A98FB312516821600114690 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A98FB392516821600114690 /* PBXTargetDependency */,
+			);
+			name = SimplePaginatedListIntegrationTests;
+			productName = SimplePaginatedListIntegrationTests;
+			productReference = 0A98FB332516821600114690 /* SimplePaginatedListIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,6 +299,10 @@
 						CreatedOnToolsVersion = 11.7;
 					};
 					0A8150FC25165A4B008F68A5 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 0A8150E625165A4A008F68A5;
+					};
+					0A98FB322516821600114690 = {
 						CreatedOnToolsVersion = 11.7;
 						TestTargetID = 0A8150E625165A4A008F68A5;
 					};
@@ -231,6 +323,7 @@
 			targets = (
 				0A8150E625165A4A008F68A5 /* SimplePaginatedList */,
 				0A8150FC25165A4B008F68A5 /* SimplePaginatedListTests */,
+				0A98FB322516821600114690 /* SimplePaginatedListIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,6 +340,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0A8150FB25165A4B008F68A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A98FB312516821600114690 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,6 +443,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A98FB2C251678E900114690 /* FactoryList.swift in Sources */,
+				0A98FB292516779D00114690 /* FactoryRepository.swift in Sources */,
+				0A98FB2E251679A700114690 /* Factory.swift in Sources */,
 				0A8150EF25165A4A008F68A5 /* FactoryListViewController.swift in Sources */,
 				0A8150EB25165A4A008F68A5 /* AppDelegate.swift in Sources */,
 				0A8150ED25165A4A008F68A5 /* SceneDelegate.swift in Sources */,
@@ -357,6 +460,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A98FB2F2516821600114690 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A98FB3E2516822D00114690 /* FactoryRepositoryIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -364,6 +475,11 @@
 			isa = PBXTargetDependency;
 			target = 0A8150E625165A4A008F68A5 /* SimplePaginatedList */;
 			targetProxy = 0A8150FE25165A4B008F68A5 /* PBXContainerItemProxy */;
+		};
+		0A98FB392516821600114690 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A8150E625165A4A008F68A5 /* SimplePaginatedList */;
+			targetProxy = 0A98FB382516821600114690 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -587,6 +703,46 @@
 			};
 			name = Release;
 		};
+		0A98FB3B2516821600114690 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LDLYQW3XY4;
+				INFOPLIST_FILE = SimplePaginatedListIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kedio.SimplePaginatedListIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimplePaginatedList.app/SimplePaginatedList";
+			};
+			name = Debug;
+		};
+		0A98FB3C2516821600114690 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LDLYQW3XY4;
+				INFOPLIST_FILE = SimplePaginatedListIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kedio.SimplePaginatedListIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimplePaginatedList.app/SimplePaginatedList";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -613,6 +769,15 @@
 			buildConfigurations = (
 				0A81510A25165A4B008F68A5 /* Debug */,
 				0A81510B25165A4B008F68A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A98FB3A2516821600114690 /* Build configuration list for PBXNativeTarget "SimplePaginatedListIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A98FB3B2516821600114690 /* Debug */,
+				0A98FB3C2516821600114690 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
