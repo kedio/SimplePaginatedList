@@ -1,0 +1,19 @@
+# File options
+
+--exclude Pods
+
+# Format options
+
+--swiftversion 5
+--commas inline
+--wrapparameters after-first
+--wraparguments before-first
+--wrapcollections before-first
+
+# Rules
+
+--disable andOperator
+--disable anyObjectProtocol
+--disable unusedArguments
+--disable numberFormatting
+--disable wrapMultilineStatementBraces
