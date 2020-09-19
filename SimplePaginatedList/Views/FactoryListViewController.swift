@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FactoryListViewController.swift
 //  SimplePaginatedList
 //
 //  Created by Kevin Dion on 2020-09-19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FactoryListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
