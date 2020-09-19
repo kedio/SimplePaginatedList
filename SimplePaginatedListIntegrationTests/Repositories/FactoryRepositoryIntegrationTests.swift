@@ -13,18 +13,18 @@ import XCTest
 
 class FactoryRepositoryIntegrationTests: XCTestCase {
     // MARK: Properties
-    
+
     var request: Cancellable?
 
     // MARK: Test fetch and mapping
-    
+
     func test_GivenRepository_WhenFetching_ThenReceiveMappedData() {
         // Given
         let expected = expectation(description: "Fetch should complete")
         let repository = DefaultFactoryRepository()
-        var receivedFactoryList: FactoryList?
 
         // When
+        var receivedFactoryList: FactoryList?
         request = repository.fetch(at: 0)
             .sink(receiveCompletion: { _ in
                 expected.fulfill()

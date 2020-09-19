@@ -15,25 +15,25 @@ protocol FactoryRepository {
 
 class DefaultFactoryRepository: FactoryRepository {
     // MARK: Constants
-    
-    private let baseUrl = "https://sg666zbdmf.execute-api.us-east-1.amazonaws.com/dev"
+
+    let baseUrl = "https://sg666zbdmf.execute-api.us-east-1.amazonaws.com/dev"
+
+    // MARK: Properties
+
+    private var requestService: APIRequestService
+
+    // MARK: Init
+
+    init(requestService: APIRequestService = DefaultAPIRequestService()) {
+        self.requestService = requestService
+    }
 
     // MARK: Fetching
-    
-    func fetch(at offset: Int) -> AnyPublisher<FactoryList, Error> {
-        guard let url = URL(string: baseUrl) else {
-            return Fail(error: ErrorType.unexpected).eraseToAnyPublisher()
-        }
 
-        return URLSession.shared.dataTaskPublisher(for: url)
+    func fetch(at offset: Int) -> AnyPublisher<FactoryList, Error> {
+        return requestService.publisher(for: baseUrl + "?offset=\(offset)")
             .map { $0.data }
             .decode(type: FactoryList.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
-    }
-}
-
-extension DefaultFactoryRepository {
-    enum ErrorType: String, Error {
-        case unexpected
     }
 }
