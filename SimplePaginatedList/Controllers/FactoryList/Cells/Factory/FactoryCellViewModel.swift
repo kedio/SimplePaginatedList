@@ -10,9 +10,11 @@ import Combine
 import Foundation
 
 class FactoryCellViewModel {
-    // MARK: Binding
+    // MARK: Bindings
 
     @Published var name: String?
+
+    // MARK: Initialization
 
     init(factory: Factory) {
         name = factory.name

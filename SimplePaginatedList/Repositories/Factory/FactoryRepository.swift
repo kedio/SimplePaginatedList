@@ -20,18 +20,18 @@ class DefaultFactoryRepository: FactoryRepository {
 
     // MARK: Properties
 
-    private var requestService: APIRequestService
+    private var service: APIRequestService
 
     // MARK: Init
 
-    init(requestService: APIRequestService = DefaultAPIRequestService()) {
-        self.requestService = requestService
+    init(service: APIRequestService = DefaultAPIRequestService()) {
+        self.service = service
     }
 
     // MARK: Fetching
 
     func fetch(at offset: Int) -> AnyPublisher<FactoryList, Error> {
-        return requestService.publisher(for: baseUrl + "?offset=\(offset)")
+        return service.publisher(for: baseUrl + "?offset=\(offset)")
             .map { $0.data }
             .decode(type: FactoryList.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()

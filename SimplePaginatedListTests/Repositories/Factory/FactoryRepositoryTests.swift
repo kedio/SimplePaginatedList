@@ -20,8 +20,8 @@ class FactoryRepositoryTests: XCTestCase {
 
     func test_GivenOffset_WhenFetching_ThenFetchWithExpectedOffset() {
         // Given
-        let mockRequestService = MockRequestService()
-        let repository = DefaultFactoryRepository(requestService: mockRequestService)
+        let mockService = MockRequestService()
+        let repository = DefaultFactoryRepository(service: mockService)
         let offset = 10
 
         // When
@@ -29,8 +29,8 @@ class FactoryRepositoryTests: XCTestCase {
 
         // Then
         let expectedUrl = repository.baseUrl + "?offset=10"
-        XCTAssertTrue(mockRequestService.publisherCalled)
-        XCTAssertEqual(mockRequestService.urlInPublisherCall, expectedUrl)
+        XCTAssertTrue(mockService.publisherCalled)
+        XCTAssertEqual(mockService.urlInPublisherCall, expectedUrl)
     }
 }
 
@@ -46,7 +46,8 @@ extension FactoryRepositoryTests {
         func publisher(for urlString: String) -> AnyPublisher<APIResponse, URLError> {
             publisherCalled = true
             urlInPublisherCall = urlString
-            return Result.failure(URLError(.cancelled)).publisher.eraseToAnyPublisher()
+            return Result.Publisher(URLError(.cancelled))
+                .eraseToAnyPublisher()
         }
     }
 }

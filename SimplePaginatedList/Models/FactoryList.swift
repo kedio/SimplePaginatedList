@@ -13,4 +13,14 @@ struct FactoryList: Codable {
     let next: String?
     let previous: String?
     let results: [Factory]
+
+    init(count: Int = 0,
+         next: String? = nil,
+         previous: String? = nil,
+         results: [Factory] = []) {
+        self.count = count
+        self.next = next
+        self.previous = previous
+        self.results = results
+    }
 }

@@ -14,4 +14,16 @@ struct Factory: Codable {
     let division: String
     let country: String
     let address: String
+
+    init(id: Int = 0,
+         name: String = "",
+         division: String = "",
+         country: String = "",
+         address: String = "") {
+        self.id = id
+        self.name = name
+        self.division = division
+        self.country = country
+        self.address = address
+    }
 }
