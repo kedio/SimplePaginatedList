@@ -48,10 +48,14 @@ class FactoryListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard rows.count > indexPath.row else { return UITableViewCell() }
+        guard let row = getRow(at: indexPath) else { return UITableViewCell() }
 
-        let row = rows[indexPath.row]
         return cell(for: row, in: tableView, at: indexPath) ?? UITableViewCell()
+    }
+
+    private func getRow(at indexPath: IndexPath) -> Row? {
+        guard rows.count > indexPath.row else { return nil }
+        return rows[indexPath.row]
     }
 
     private func cell(for row: Row, in tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell? {
@@ -72,9 +76,23 @@ class FactoryListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let details = FactoryDetailsViewController.loadFromStoryboard() else { return }
+        guard let row = getRow(at: indexPath) else { return }
 
-        navigationController?.pushViewController(details, animated: true)
+        switch row {
+        case let .factory(cellViewModel):
+            openFactoryDetails(for: cellViewModel)
+        case .placeholder:
+            return
+        }
+    }
+
+    private func openFactoryDetails(for cellViewModel: FactoryCellViewModel) {
+        guard let detailsController = FactoryDetailsViewController.loadFromStoryboard() else { return }
+
+        let detailsViewModel = FactoryDetailsViewModel(factory: cellViewModel.factory)
+        detailsController.configure(viewModel: detailsViewModel)
+
+        navigationController?.pushViewController(detailsController, animated: true)
     }
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

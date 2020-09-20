@@ -15,9 +15,14 @@ class FactoryCellViewModel {
     @Published var name: String?
     @Published var division: String?
 
+    // MARK: Properties
+
+    let factory: Factory
+
     // MARK: Initialization
 
     init(factory: Factory) {
+        self.factory = factory
         name = factory.name
         division = factory.division
     }

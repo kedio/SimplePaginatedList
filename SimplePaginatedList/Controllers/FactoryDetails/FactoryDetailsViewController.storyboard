@@ -26,6 +26,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7QX-gD-Tc1"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="QRh-nK-v2x" id="egC-SE-gbG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yo8-5O-Gm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
