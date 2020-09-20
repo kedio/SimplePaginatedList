@@ -28,6 +28,14 @@ class FactoryListViewController: UITableViewController {
         register(cellType: FactoryCell.self)
         register(cellType: FactoryPlaceholderCell.self)
 
+        setUpBinding()
+    }
+
+    private func register(cellType: NibLoadable.Type) {
+        tableView.register(cellType.nib, forCellReuseIdentifier: cellType.identifier)
+    }
+
+    private func setUpBinding() {
         viewModel.$rows
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] rows in
@@ -35,10 +43,6 @@ class FactoryListViewController: UITableViewController {
                 self?.tableView.reloadData()
             })
             .store(in: &cancelBag)
-    }
-
-    private func register(cellType: NibLoadable.Type) {
-        tableView.register(cellType.nib, forCellReuseIdentifier: cellType.identifier)
     }
 
     // MARK: TableView DataSource and Delegate
