@@ -72,6 +72,6 @@ class FactoryListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        viewModel.willDisplay(index: indexPath.row)
+        viewModel.willDisplayRow(at: indexPath.row)
     }
 }
