@@ -1,5 +1,5 @@
 //
-//  UIViewExtension.swift
+//  UIViewExtensions.swift
 //  SimplePaginatedList
 //
 //  Created by Kevin Dion on 2020-09-19.

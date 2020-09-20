@@ -71,6 +71,12 @@ class FactoryListViewController: UITableViewController {
         tableView.dequeueReusableCell(withIdentifier: cell.identifier, for: indexPath) as? T
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let details = FactoryDetailsViewController.loadFromStoryboard() else { return }
+
+        navigationController?.pushViewController(details, animated: true)
+    }
+
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         viewModel.willDisplayRow(at: indexPath.row)
     }
