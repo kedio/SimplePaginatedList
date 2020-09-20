@@ -13,10 +13,12 @@ class FactoryCellViewModel {
     // MARK: Bindings
 
     @Published var name: String?
+    @Published var division: String?
 
     // MARK: Initialization
 
     init(factory: Factory) {
         name = factory.name
+        division = factory.division
     }
 }

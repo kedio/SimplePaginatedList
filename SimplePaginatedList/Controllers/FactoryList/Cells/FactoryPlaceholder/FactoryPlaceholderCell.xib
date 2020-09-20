@@ -8,21 +8,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="76" id="ePh-Ir-I4x" customClass="FactoryPlaceholderCell" customModule="SimplePaginatedList" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="81" id="ePh-Ir-I4x" customClass="FactoryPlaceholderCell" customModule="SimplePaginatedList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ePh-Ir-I4x" id="GY5-cR-haW">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0T-ne-PZw" userLabel="Container View">
-                        <rect key="frame" x="15" y="10" width="384" height="66"/>
+                        <rect key="frame" x="15" y="10" width="384" height="71"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZqJ-RY-9Gj">
-                                <rect key="frame" x="10" y="10" width="294" height="46"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="12" y="12" width="252" height="26"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="vCf-up-X5M"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="vCf-up-X5M"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLD-Sm-pJN">
+                                <rect key="frame" x="12" y="43" width="132" height="16"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="4Cx-UF-U4H"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -33,10 +45,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZqJ-RY-9Gj" firstAttribute="leading" secondItem="e0T-ne-PZw" secondAttribute="leading" constant="10" id="0Mt-cZ-xvD"/>
-                            <constraint firstAttribute="bottom" secondItem="ZqJ-RY-9Gj" secondAttribute="bottom" constant="10" id="18z-xs-WrG"/>
-                            <constraint firstItem="ZqJ-RY-9Gj" firstAttribute="top" secondItem="e0T-ne-PZw" secondAttribute="top" constant="10" id="bmT-kj-pzB"/>
-                            <constraint firstAttribute="trailing" secondItem="ZqJ-RY-9Gj" secondAttribute="trailing" constant="80" id="vAG-kq-T7e"/>
+                            <constraint firstItem="ZqJ-RY-9Gj" firstAttribute="leading" secondItem="e0T-ne-PZw" secondAttribute="leading" constant="12" id="0Mt-cZ-xvD"/>
+                            <constraint firstItem="HLD-Sm-pJN" firstAttribute="leading" secondItem="e0T-ne-PZw" secondAttribute="leading" constant="12" id="OFC-4k-5Wi"/>
+                            <constraint firstAttribute="bottom" secondItem="HLD-Sm-pJN" secondAttribute="bottom" constant="12" id="UfF-Bu-PK5"/>
+                            <constraint firstItem="ZqJ-RY-9Gj" firstAttribute="top" secondItem="e0T-ne-PZw" secondAttribute="top" constant="12" id="bmT-kj-pzB"/>
+                            <constraint firstAttribute="trailing" secondItem="ZqJ-RY-9Gj" secondAttribute="trailing" constant="120" id="vAG-kq-T7e"/>
+                            <constraint firstItem="HLD-Sm-pJN" firstAttribute="top" secondItem="ZqJ-RY-9Gj" secondAttribute="bottom" constant="5" id="xAi-wq-fDW"/>
+                            <constraint firstAttribute="trailing" secondItem="HLD-Sm-pJN" secondAttribute="trailing" constant="240" id="yW9-HP-wSO"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -53,7 +68,7 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <point key="canvasLocation" x="137.68115942028987" y="141.29464285714286"/>
+            <point key="canvasLocation" x="137.68115942028987" y="140.95982142857142"/>
         </tableViewCell>
     </objects>
 </document>
