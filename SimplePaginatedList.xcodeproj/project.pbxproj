@@ -13,6 +13,9 @@
 		0A0139392517246D0013E3B0 /* UiViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0139382517246D0013E3B0 /* UiViewControllerExtensions.swift */; };
 		0A01393B2517C99F0013E3B0 /* FactoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A01393A2517C99F0013E3B0 /* FactoryDetailsViewModel.swift */; };
 		0A331F0E2517ECAD00674F5D /* FactoryDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A331F0D2517ECAD00674F5D /* FactoryDetailsViewModelTests.swift */; };
+		0A331F112517F30500674F5D /* GeocoderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A331F102517F30500674F5D /* GeocoderService.swift */; };
+		0A331F152517F79D00674F5D /* GeocoderServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A331F142517F79D00674F5D /* GeocoderServiceIntegrationTests.swift */; };
+		0A331F17251804C600674F5D /* SubscribersExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A331F16251804C600674F5D /* SubscribersExtensions.swift */; };
 		0A5598E9251688B000F27B70 /* APIRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5598E8251688B000F27B70 /* APIRequestService.swift */; };
 		0A5598EC251690F700F27B70 /* FactoryRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5598EB251690F700F27B70 /* FactoryRepositoryTests.swift */; };
 		0A5598F125169C7C00F27B70 /* FactoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5598F025169C7C00F27B70 /* FactoryCell.swift */; };
@@ -62,6 +65,9 @@
 		0A0139382517246D0013E3B0 /* UiViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0A01393A2517C99F0013E3B0 /* FactoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryDetailsViewModel.swift; sourceTree = "<group>"; };
 		0A331F0D2517ECAD00674F5D /* FactoryDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		0A331F102517F30500674F5D /* GeocoderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderService.swift; sourceTree = "<group>"; };
+		0A331F142517F79D00674F5D /* GeocoderServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderServiceIntegrationTests.swift; sourceTree = "<group>"; };
+		0A331F16251804C600674F5D /* SubscribersExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribersExtensions.swift; sourceTree = "<group>"; };
 		0A5598E8251688B000F27B70 /* APIRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestService.swift; sourceTree = "<group>"; };
 		0A5598EB251690F700F27B70 /* FactoryRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryRepositoryTests.swift; sourceTree = "<group>"; };
 		0A5598F025169C7C00F27B70 /* FactoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryCell.swift; sourceTree = "<group>"; };
@@ -142,10 +148,35 @@
 			path = FactoryDetails;
 			sourceTree = "<group>";
 		};
+		0A331F0F2517F2A500674F5D /* GeocoderService */ = {
+			isa = PBXGroup;
+			children = (
+				0A331F102517F30500674F5D /* GeocoderService.swift */,
+			);
+			path = GeocoderService;
+			sourceTree = "<group>";
+		};
+		0A331F122517F74400674F5D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0A331F132517F77700674F5D /* GeocoderService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0A331F132517F77700674F5D /* GeocoderService */ = {
+			isa = PBXGroup;
+			children = (
+				0A331F142517F79D00674F5D /* GeocoderServiceIntegrationTests.swift */,
+			);
+			path = GeocoderService;
+			sourceTree = "<group>";
+		};
 		0A5598E72516888000F27B70 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				0A5598F825169F7900F27B70 /* APIRequest */,
+				0A331F0F2517F2A500674F5D /* GeocoderService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -181,8 +212,9 @@
 		0A5598F525169E0500F27B70 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0A5598F625169E1C00F27B70 /* UIViewExtensions.swift */,
+				0A331F16251804C600674F5D /* SubscribersExtensions.swift */,
 				0A0139382517246D0013E3B0 /* UiViewControllerExtensions.swift */,
+				0A5598F625169E1C00F27B70 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -360,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				0A98FB3F2516823300114690 /* Repositories */,
+				0A331F122517F74400674F5D /* Services */,
 				0A98FB372516821600114690 /* Info.plist */,
 			);
 			path = SimplePaginatedListIntegrationTests;
@@ -616,6 +649,8 @@
 			files = (
 				0A0139392517246D0013E3B0 /* UiViewControllerExtensions.swift in Sources */,
 				0A98FB2C251678E900114690 /* FactoryList.swift in Sources */,
+				0A331F112517F30500674F5D /* GeocoderService.swift in Sources */,
+				0A331F17251804C600674F5D /* SubscribersExtensions.swift in Sources */,
 				0A0139372517238B0013E3B0 /* StoryboardLoadable.swift in Sources */,
 				0A98FB292516779D00114690 /* FactoryRepository.swift in Sources */,
 				0A98FB2E251679A700114690 /* Factory.swift in Sources */,
@@ -648,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A331F152517F79D00674F5D /* GeocoderServiceIntegrationTests.swift in Sources */,
 				0A98FB3E2516822D00114690 /* FactoryRepositoryIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

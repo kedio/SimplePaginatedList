@@ -40,16 +40,22 @@ class FactoryDetailsViewController: UIViewController {
 
         setUpView()
         setUpBinding()
+        viewModel?.searchAddress()
     }
 
     private func setUpView() {
+        mapView.delegate = self
         addressNotFoundLabel.adjustsFontSizeToFitWidth = true
     }
 
     private func setMapRegion(for coordinate: CLLocationCoordinate2D) {
-        let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         mapView.setRegion(region, animated: false)
+
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        mapView.addAnnotation(annotation)
     }
 
     private func setUpBinding() {
@@ -75,5 +81,15 @@ class FactoryDetailsViewController: UIViewController {
         viewModel?.$address
             .assign(to: \.text, on: addressLabel)
             .store(in: &cancelBag)
+    }
+}
+
+extension FactoryDetailsViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation is MKPointAnnotation else { return nil }
+
+        let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotation")
+        annotationView.animatesDrop = true
+        return annotationView
     }
 }

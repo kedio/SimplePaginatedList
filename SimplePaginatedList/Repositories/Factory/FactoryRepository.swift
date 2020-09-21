@@ -24,7 +24,7 @@ class DefaultFactoryRepository: FactoryRepository {
 
     // MARK: Init
 
-    init(service: APIRequestService = DefaultAPIRequestService()) {
+    init(service: APIRequestService = URLSessionAPIRequestService()) {
         self.service = service
     }
 

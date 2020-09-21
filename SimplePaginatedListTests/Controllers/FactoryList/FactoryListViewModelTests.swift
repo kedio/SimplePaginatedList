@@ -211,8 +211,7 @@ extension FactoryListViewModelTests {
                 return Result.Publisher(error)
                     .eraseToAnyPublisher()
             } else {
-                return Just(factoryList)
-                    .setFailureType(to: Error.self)
+                return Result.Publisher(factoryList)
                     .eraseToAnyPublisher()
             }
         }

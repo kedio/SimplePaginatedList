@@ -14,9 +14,9 @@ import XCTest
 class FactoryRepositoryIntegrationTests: XCTestCase {
     // MARK: Properties
 
-    var request: Cancellable?
+    var cancelBag = Set<AnyCancellable>()
 
-    // MARK: Test fetch and mapping
+    // MARK: Test fetch
 
     func test_GivenRepository_WhenFetching_ThenReceiveMappedData() {
         // Given
@@ -25,12 +25,13 @@ class FactoryRepositoryIntegrationTests: XCTestCase {
 
         // When
         var receivedFactoryList: FactoryList?
-        request = repository.fetch(at: 0)
+        repository.fetch(at: 0)
             .sink(receiveCompletion: { _ in
                 expected.fulfill()
             }, receiveValue: { list in
                 receivedFactoryList = list
             })
+            .store(in: &cancelBag)
 
         // Then
         waitForExpectations(timeout: 5, handler: nil)

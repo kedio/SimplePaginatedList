@@ -70,7 +70,7 @@
                                                     <constraint firstItem="VvX-ZQ-dKg" firstAttribute="leading" secondItem="1LC-qs-VJD" secondAttribute="leading" priority="750" id="575-qM-0we"/>
                                                     <constraint firstAttribute="bottom" secondItem="VvX-ZQ-dKg" secondAttribute="bottom" id="kNs-Z6-fdW"/>
                                                     <constraint firstAttribute="width" secondItem="1LC-qs-VJD" secondAttribute="height" id="mky-Tn-WrR"/>
-                                                    <constraint firstItem="VvX-ZQ-dKg" firstAttribute="centerY" secondItem="1LC-qs-VJD" secondAttribute="centerY" id="qyJ-cr-Vvq"/>
+                                                    <constraint firstItem="VvX-ZQ-dKg" firstAttribute="centerY" secondItem="1LC-qs-VJD" secondAttribute="centerY" priority="999" id="qyJ-cr-Vvq"/>
                                                     <constraint firstItem="VvX-ZQ-dKg" firstAttribute="centerX" secondItem="1LC-qs-VJD" secondAttribute="centerX" id="tOm-to-uFu"/>
                                                 </constraints>
                                             </view>
