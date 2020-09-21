@@ -127,11 +127,8 @@ class FactoryListViewModelTests: XCTestCase {
 
     private func hasExpectedRowsForOtherIndex(in rows: [FactoryListViewModel.Row]) -> Bool {
         let firstPage = Array(rows[0 ..< 10])
-        print(firstPage)
         let otherPage = Array(rows[10 ..< 20])
-        print(otherPage)
         let rest = Array(rows[20...])
-        print(rest)
         return containsOnlyPlaceholder(in: firstPage)
             && containsOnlyFactoryRow(in: otherPage)
             && containsOnlyPlaceholder(in: rest)

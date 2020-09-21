@@ -60,6 +60,7 @@ class FactoryDetailsViewController: UIViewController {
 
     private func setUpBinding() {
         viewModel?.$isAddressFound
+            .receive(on: DispatchQueue.main)
             .assign(to: \.isHidden, on: addressNotFoundContainer)
             .store(in: &cancelBag)
 
